@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HyperZone.Views.MainPage"
+             Title="{Binding Title}">
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        
+        <Button Text="今の日時" Command="{Binding SetCurrentDateTime}"/>
+        
+        <Label Text="日付" />
+        
+        <DatePicker Date="{Binding MeasuredDate}"/>
+        
+        <Label Text="時間" />
+        
+        <TimePicker Time="{Binding MeasuredTime}"/>
+        
+        <Label Text="体温" />
+        
+        <Entry Keyboard="Numeric" Text="{Binding MeasuredTemperature}"/>
+        
+        <Button Text="記録" Command="{Binding SubmitData}" BackgroundColor="LightBlue"/>
+        
+        <Button Text="グラフ表示ページへ" Command="{Binding ShowGraphPage}"/>
+
+        <Button Text="一覧表示ページへ" Command="{Binding ShowListView}"/>
+
+        <Button Text="データ削除" BackgroundColor="Red" Command="{Binding DeleteData}"/>
+    </StackLayout>
+
+</ContentPage>

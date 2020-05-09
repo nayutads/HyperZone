@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:local="clr-namespace:HyperZone.ViewModels"
+             x:Class="HyperZone.Views.TemperatureGraph"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             Title="{Binding Title}">
+   
+    <StackLayout>
+        <oxy:PlotView Model="{Binding Model}"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <oxy:PlotView.BindingContext>
+                <local:PlotViewModel />
+            </oxy:PlotView.BindingContext>
+            
+            
+        </oxy:PlotView>
+    </StackLayout>
+
+</ContentPage>

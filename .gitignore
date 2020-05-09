@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+HyperZone/HyperZone.iOS/
+
+HyperZone/HyperZone.UWP/
+
+UnitTestProject1/

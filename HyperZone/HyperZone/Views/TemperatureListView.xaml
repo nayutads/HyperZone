@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="HyperZone.Views.TemperatureListView"
+             Title="{Binding Title}">
+
+    <ListView ItemsSource="{Binding TemperatureCollection}" SelectedItem="{Binding SelectedData}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Temperature}" Detail="{Binding Datetime}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <b:Interaction.Behaviors>
+            <b:BehaviorCollection>
+                <b:EventToCommand EventName="ItemTapped" Command="{Binding SelectedCommand}" />
+            </b:BehaviorCollection>
+        </b:Interaction.Behaviors>
+        
+
+    </ListView>
+</ContentPage>
